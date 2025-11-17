@@ -1,0 +1,28 @@
+services:
+  biogrowsystem_frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: biogrowsystem-frontend
+    environment:
+      FRONTEND_PORT: 5176
+    expose:
+      - "5176"
+    restart: unless-stopped
+    networks:
+      - traefik_proxy
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik_proxy
+
+      # === TU DOMINIO REAL ===
+      - traefik.http.routers.biogrowsystem-web.rule=Host(`biogrowsystem.com`) && PathPrefix(`/`)
+
+      - traefik.http.routers.biogrowsystem-web.entrypoints=websecure
+      - traefik.http.routers.biogrowsystem-web.tls=true
+      - traefik.http.routers.biogrowsystem-web.tls.certresolver=le
+      - traefik.http.services.biogrowsystem-web.loadbalancer.server.port=5176
+
+networks:
+  traefik_proxy:
+    external: true

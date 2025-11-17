@@ -1,0 +1,14 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci --no-cache
+
+COPY . .
+
+RUN npm run build
+RUN npm install -g serve
+
+EXPOSE 5176
+CMD ["serve", "-s", "dist", "-l", "5176"]
