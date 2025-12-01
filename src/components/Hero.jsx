@@ -57,7 +57,9 @@ const Hero = () => {
       {/* Modelo Spline: oculto en mobile */}
       <div className="hidden md:flex w-full justify-center lg:justify-end mt-10 lg:mt-0">
         <div className="w-[90%] sm:w-[80%] md:w-[60%] lg:w-[36rem]">
-          <Spline scene="https://prod.spline.design/0nqU838cDLx5VFtk/scene.splinecode" />
+        <Spline
+        scene="https://prod.spline.design/9aFyrDFGOEiXcQSD/scene.splinecode" 
+      />
         </div>
       </div>
     </main>

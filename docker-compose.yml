@@ -15,8 +15,8 @@ services:
       - traefik.enable=true
       - traefik.docker.network=traefik_proxy
 
-      # === TU DOMINIO REAL ===
-      - traefik.http.routers.biogrowsystem-web.rule=Host(`biogrowsystem.com`) && PathPrefix(`/`)
+      # === RUTA CORRECTA PARA 2 DOMINIOS ===
+      - traefik.http.routers.biogrowsystem-web.rule=Host(`biogrowsystem.com`) || Host(`www.biogrowsystem.com`)
 
       - traefik.http.routers.biogrowsystem-web.entrypoints=websecure
       - traefik.http.routers.biogrowsystem-web.tls=true
