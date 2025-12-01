@@ -161,6 +161,24 @@ const Header = () => {
           <i className="bx bx-file text-emerald-400 text-xl" />
           <span>Sistema de Rendición de gastos</span>
         </a>
+
+        <a
+          href="https://pedidos.biogrowsystem.com/"
+          className="
+            w-11/12 max-w-xs
+            flex items-center justify-center gap-2
+            rounded-xl border border-emerald-500/70 
+            bg-black/60 px-4 py-3
+            text-base font-medium text-gray-100 tracking-wide
+            shadow-[0_0_18px_rgba(16,185,129,0.35)]
+            hover:bg-emerald-500/10
+            active:scale-95
+            transition-all duration-200
+          "
+        >
+          <i className="bx bx-file text-emerald-400 text-xl" />
+          <span>Sistema de Pedidos Biogrow</span>
+        </a>
       </div>
     </header>
   );
