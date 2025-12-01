@@ -102,6 +102,34 @@ const Header = () => {
             "
           />
         </a>
+
+        <a
+          href="https://pedidos.biogrowsystem.com/"
+          className="
+            relative group text-sm lg:text-base tracking-wider text-gray-200
+            transition-all
+          "
+        >
+          <span
+            className="
+              inline-flex items-center gap-2 px-3 py-1 rounded-full
+              bg-white/0 group-hover:bg-white/5
+              border border-transparent group-hover:border-emerald-500/60
+              shadow-none group-hover:shadow-[0_0_15px_rgba(16,185,129,0.35)]
+              transition-all duration-300
+            "
+          >
+            <i className="bx bx-cart text-emerald-400 text-lg" />
+            <span>Sistema de Pedidos</span>
+          </span>
+          <span
+            className="
+              pointer-events-none absolute -bottom-1 left-0
+              h-[2px] w-0 bg-gradient-to-r from-emerald-400 to-emerald-600
+              transition-all duration-300 group-hover:w-full
+            "
+          />
+        </a>
       </nav>
 
       {/* BOTÓN MOBILE */}
@@ -176,7 +204,7 @@ const Header = () => {
             transition-all duration-200
           "
         >
-          <i className="bx bx-file text-emerald-400 text-xl" />
+          <i className="bx bx-cart text-emerald-400 text-xl" />
           <span>Sistema de Pedidos Biogrow</span>
         </a>
       </div>
